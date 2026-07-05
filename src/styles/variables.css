@@ -1,0 +1,29 @@
+:root {
+  /* Hunter Green */
+  --color-hunter-green-50: #eff6ee;
+  --color-hunter-green-100: #dfeedd;
+  --color-hunter-green-200: #bfddbb;
+  --color-hunter-green-300: #9fcc99;
+  --color-hunter-green-400: #7fbb77;
+  --color-hunter-green-500: #5faa55;
+  --color-hunter-green-600: #4c8844;
+  --color-hunter-green-700: #396633;
+  --color-hunter-green-800: #264422;
+  --color-hunter-green-900: #132211;
+  --color-hunter-green-950: #0d180c;
+
+  /* Neutral */
+  --color-neutral-600: #4a4a4a;
+  --color-neutral-700: #333333;
+  --color-neutral-800: #212121;
+  --color-neutral-900: #141414;
+  --color-black: #000000;
+
+  /* Font */
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-medium: 500;
+  --fs-h1: clamp(2rem, 1.5rem + 2.2vw, 2.5rem);
+}
