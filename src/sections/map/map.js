@@ -20,10 +20,11 @@ export function initMap() {
             </svg>
             <input type="text" id="station-search" placeholder="Search stations...">
           </div>
-          <select id="city-filter" class="city-select">
-            <option value="All">All Cities</option>
-            ${cities.map(city => `<option value="${city}">${city}</option>`).join('')}
-          </select>
+
+          <div id="city-filter-container" class="city-pill-container">
+            <button class="city-pill active" data-city="All">All Cities</button>
+            ${cities.map(city => `<button class="city-pill" data-city="${city}">${city}</button>`).join('')}
+          </div>
         </div>
 
         <div id="station-list" class="station-list"></div>
@@ -145,10 +146,18 @@ export function initMap() {
     if (activeCard) activeCard.classList.add('active');
   }
 
-  document.getElementById('city-filter').addEventListener('change', (e) => {
-    currentFilterCity = e.target.value;
-    activeStationId = null; 
-    renderUI();
+  const cityPills = document.querySelectorAll('.city-pill');
+  
+  cityPills.forEach(pill => {
+    pill.addEventListener('click', (e) => {
+      cityPills.forEach(p => p.classList.remove('active'));
+      
+      e.target.classList.add('active');
+      
+      currentFilterCity = e.target.getAttribute('data-city');
+      activeStationId = null; 
+      renderUI();
+    });
   });
 
   document.getElementById('station-search').addEventListener('input', (e) => {
