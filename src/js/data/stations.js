@@ -1,12 +1,12 @@
-import ecofillBeiji from "../../assets/images/stations/ecofill-beiji.jpg";
-import refillMargonda from "../../assets/images/stations/refill-margonda.jpg";
-import isiUlangKemang from "../../assets/images/stations/isi-ulang-kemang.jpg";
-import greenRefillMenteng from "../../assets/images/stations/green-refill-menteng.jpg";
-import ecofillSuryakancana from "../../assets/images/stations/ecofill-suryakancana.jpg";
-import refillPakHerman from "../../assets/images/stations/refill-pak-herman.jpg";
-import isiUlangBsd from "../../assets/images/stations/isi-ulang-bsd.jpg";
-import ecofillAlamSutera from "../../assets/images/stations/ecofill-alam-sutera.jpg";
-import refillHijauBekasi from "../../assets/images/stations/refill-hijau-bekasi.jpg";
+import ecofillBeiji from "../../assets/images/stations/ecofill-beiji.png";
+import refillMargonda from "../../assets/images/stations/refill-margonda.png";
+import isiUlangKemang from "../../assets/images/stations/isi-ulang-kemang.png";
+import greenRefillMenteng from "../../assets/images/stations/green-refill-menteng.png";
+import ecofillSuryakancana from "../../assets/images/stations/ecofill-suryakancana.png";
+import refillPakHerman from "../../assets/images/stations/refill-pak-herman.png";
+import isiUlangBsd from "../../assets/images/stations/isi-ulang-bsd.png";
+import ecofillAlamSutera from "../../assets/images/stations/ecofill-alam-sutera.png";
+import refillHijauBekasi from "../../assets/images/stations/refill-hijau-bekasi.png";
 
 export const stations = [
   {
