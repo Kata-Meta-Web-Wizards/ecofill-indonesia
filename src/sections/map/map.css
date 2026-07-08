@@ -1,9 +1,30 @@
 .map-section {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   background-color: #ffffff;
+}
+
+.map-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.map-section-title {
+  font-family: var(--font-heading);
+  color: var(--color-hunter-green-950);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: var(--fw-bold);
+  margin-bottom: 1rem;
+}
+
+.map-section-subtitle {
+  font-family: var(--font-body);
+  color: var(--color-neutral-600);
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .refill-wrapper {
@@ -14,7 +35,7 @@
   background: white;
   border-radius: 1.5rem;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
@@ -28,21 +49,11 @@
   z-index: 10;
   border-right: 1px solid #e2e8f0;
 }
-.refill-title {
-  font-family: var(--font-heading);
-  color: var(--color-hunter-green-950);
-  font-size: 1.85rem; 
-  font-weight: var(--fw-bold);
-  margin-bottom: 1.25rem;
-  position: relative; 
-  display: inline-block;
-}
-
 
 .refill-controls {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-bottom: 1.25rem;
 }
 

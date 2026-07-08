@@ -9,10 +9,13 @@ export function initMap() {
   if (!mapSection) return;
 
   mapSection.innerHTML = `
+    <div class="map-header" data-aos="fade-up">
+      <h2 class="map-section-title">Find a Refill Station</h2>
+      <p class="map-section-subtitle">Discover eco-friendly spots near you to refill your daily essentials and reduce plastic waste.</p>
+    </div>
+
     <div class="refill-wrapper" data-aos="fade-up">
       <aside class="refill-sidebar">
-        <h2 class="refill-title">Nearby Refill Station</h2>
-        
         <div class="refill-controls">
           <div class="search-box">
             <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
