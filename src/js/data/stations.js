@@ -1,12 +1,12 @@
 import ecofillBeiji from "../../assets/images/stations/ecofill-beiji.png";
-import refillMargonda from "../../assets/images/stations/refill-margonda.png";
-import isiUlangKemang from "../../assets/images/stations/isi-ulang-kemang.png";
-import greenRefillMenteng from "../../assets/images/stations/green-refill-menteng.png";
+import ecofillMargonda from "../../assets/images/stations/ecofill-margonda.png";
+import ecofillKemang from "../../assets/images/stations/ecofill-kemang.png";
+import ecofillMenteng from "../../assets/images/stations/ecofill-menteng.png";
 import ecofillSuryakancana from "../../assets/images/stations/ecofill-suryakancana.png";
-import refillPakHerman from "../../assets/images/stations/refill-pak-herman.png";
-import isiUlangBsd from "../../assets/images/stations/isi-ulang-bsd.png";
+import ecofillPajajaran from "../../assets/images/stations/ecofill-pajajaran.png";
+import ecofillBsd from "../../assets/images/stations/ecofill-bsd.png";
 import ecofillAlamSutera from "../../assets/images/stations/ecofill-alam-sutera.png";
-import refillHijauBekasi from "../../assets/images/stations/refill-hijau-bekasi.png";
+import ecofillBekasi from "../../assets/images/stations/ecofill-bekasi.png";
 
 export const stations = [
   {
@@ -14,90 +14,90 @@ export const stations = [
     name: "EcoFill Beiji",
     address: "Beiji No. 9, Depok",
     city: "Depok",
-    tags: ["Shampoo", "Detergent"],
+    tags: ["Shampoo", "Laundry Detergent", "Body Wash"],
     lat: -6.4025,
     lng: 106.7942,
     image: ecofillBeiji,
   },
   {
     id: "stn-02",
-    name: "Refill Hijau Margonda",
+    name: "EcoFill Margonda",
     address: "Jl. Margonda Raya No. 45, Depok",
     city: "Depok",
-    tags: ["Soap", "Softener"],
+    tags: ["Body Wash", "Fabric Softener", "Dishwashing Liquid", "Hand Soap"],
     lat: -6.3728,
     lng: 106.8317,
-    image: refillMargonda,
+    image: ecofillMargonda,
   },
   {
     id: "stn-03",
-    name: "Isi Ulang Kemang",
+    name: "EcoFill Kemang",
     address: "Jl. Kemang Raya No. 21, Jakarta Selatan",
     city: "Jakarta",
-    tags: ["Shampoo", "Soap"],
+    tags: ["Shampoo", "Hand Soap"],
     lat: -6.2607,
     lng: 106.8133,
-    image: isiUlangKemang,
+    image: ecofillKemang,
   },
   {
     id: "stn-04",
-    name: "Green Refill Menteng",
+    name: "EcoFill Menteng",
     address: "Jl. Menteng Raya No. 5, Jakarta Pusat",
     city: "Jakarta",
-    tags: ["Detergent", "Softener"],
+    tags: ["Laundry Detergent", "Fabric Softener", "Bleach"],
     lat: -6.1966,
     lng: 106.8353,
-    image: greenRefillMenteng,
+    image: ecofillMenteng,
   },
   {
     id: "stn-05",
     name: "EcoFill Suryakancana",
     address: "Jl. Suryakancana No. 15, Bogor",
     city: "Bogor",
-    tags: ["Soap", "Detergent"],
+    tags: ["Dishwashing Liquid", "Laundry Detergent"],
     lat: -6.5971,
     lng: 106.7912,
     image: ecofillSuryakancana,
   },
   {
     id: "stn-06",
-    name: "Refill Pak Herman",
+    name: "EcoFill Pajajaran",
     address: "Jl. Pajajaran No. 33, Bogor",
     city: "Bogor",
-    tags: ["Shampoo", "Softener"],
+    tags: ["Shampoo", "Conditioner", "Fabric Softener", "Cooking Oil"],
     lat: -6.5747,
     lng: 106.7998,
-    image: refillPakHerman,
+    image: ecofillPajajaran,
   },
   {
     id: "stn-07",
-    name: "Isi Ulang BSD",
+    name: "EcoFill BSD",
     address: "Jl. BSD Raya Utama, Tangerang Selatan",
     city: "Tangerang",
-    tags: ["Shampoo", "Soap"],
+    tags: ["Conditioner", "Body Wash", "Hand Sanitizer"],
     lat: -6.3019,
     lng: 106.6524,
-    image: isiUlangBsd,
+    image: ecofillBsd,
   },
   {
     id: "stn-08",
     name: "EcoFill Alam Sutera",
     address: "Jl. Alam Sutera Boulevard, Tangerang",
     city: "Tangerang",
-    tags: ["Detergent", "Softener"],
+    tags: ["Bleach", "Fabric Softener"],
     lat: -6.2224,
     lng: 106.6469,
     image: ecofillAlamSutera,
   },
   {
     id: "stn-09",
-    name: "Refill Hijau Bekasi",
+    name: "EcoFill Bekasi",
     address: "Jl. Ahmad Yani No. 88, Bekasi",
     city: "Bekasi",
-    tags: ["Soap", "Shampoo"],
+    tags: ["Hand Soap", "Shampoo", "Mineral Water"],
     lat: -6.2383,
     lng: 106.9756,
-    image: refillHijauBekasi,
+    image: ecofillBekasi,
   },
 ];
 
