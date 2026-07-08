@@ -1,3 +1,8 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   /* Hunter Green */
   --color-hunter-green-50: #eff6ee;
