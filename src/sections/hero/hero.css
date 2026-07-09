@@ -1,0 +1,184 @@
+#hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero-bg {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+/* Gradient overlay di atas foto: gelap di kiri (area teks), transparan di kanan (area botol) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(20, 20, 20, 0.55) 0%,
+    rgba(20, 20, 20, 0.45) 35%,
+    rgba(20, 20, 20, 0.15) 60%,
+    rgba(20, 20, 20, 0) 80%
+  );
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 24px 64px;
+  width: 100%;
+}
+
+/* Soft blurred gradient blob di belakang badge+judul+subtitle,
+   nge-blend ke foto tanpa kotak tegas */
+.hero-text-glow {
+  position: absolute;
+  top: -40px;
+  left: -60px;
+  width: 780px;
+  height: 620px;
+  background: radial-gradient(
+    ellipse at 30% 40%,
+    rgba(235, 235, 235, 0.85) 0%,
+    rgba(235, 235, 235, 0.55) 45%,
+    rgba(235, 235, 235, 0) 75%
+  );
+  filter: blur(50px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-badge {
+  position: relative;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-neutral-900);
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 15px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  margin-bottom: 28px;
+}
+
+.hero-title {
+  position: relative;
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1);
+  line-height: 1.1;
+  color: var(--color-neutral-900);
+  margin: 0 0 24px;
+  max-width: 720px;
+}
+
+.hero-subtitle {
+  position: relative;
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-neutral-800);
+  max-width: 620px;
+  margin: 0 0 32px;
+}
+
+.hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  max-width: 900px;
+}
+
+.hero-divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-divider-label {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 14px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.hero-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 900px;
+}
+
+.hero-fact-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.hero-fact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-hunter-green-100);
+  color: var(--color-neutral-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.hero-fact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-fact-value {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: 24px;
+  color: var(--color-neutral-900);
+  margin: 0 0 6px;
+}
+
+.hero-fact-label {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 13px;
+  color: var(--color-neutral-800);
+  margin: 0 0 8px;
+}
+
+.hero-fact-desc {
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-neutral-600);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .hero-facts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-inner {
+    padding: 120px 16px 40px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+}
