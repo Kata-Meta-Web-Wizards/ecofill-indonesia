@@ -26,15 +26,13 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      to right,
-      rgba(19, 34, 17, 0.45) 0%,
-      rgba(19, 34, 17, 0.3) 35%,
-      rgba(19, 34, 17, 0.1) 60%,
-      rgba(19, 34, 17, 0) 100%
-    ),
-    rgba(159, 204, 153, 0.18);
+  background: linear-gradient(
+    to right,
+    rgba(215, 234, 213, 1) 0%,    /* Hijau muda pekat/solid di area teks kiri */
+    rgba(215, 234, 213, 0.95) 35%, /* Masih cukup solid biar teks gampang dibaca */
+    rgba(215, 234, 213, 0.4) 60%,  /* Mulai pudar transparan di tengah */
+    rgba(215, 234, 213, 0) 100%    /* Full transparan di kanan biar gambar botol kelihatan jelas */
+  );
   z-index: 1;
 }
 
@@ -112,14 +110,14 @@
 .hero-divider-line {
   flex: 1;
   height: 1px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--color-hunter-green-950);
 }
 
 .hero-divider-label {
   font-family: var(--font-body);
   font-weight: var(--fw-semibold);
   font-size: 14px;
-  color: #ffffff;
+  color: var(--color-hunter-green-950);
   white-space: nowrap;
 }
 

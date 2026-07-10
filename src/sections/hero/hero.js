@@ -25,7 +25,6 @@ function renderMarkup() {
         </p>
 
         <div class="hero-divider">
-          <span class="hero-divider-line"></span>
           <span class="hero-divider-label">Fakta yang Perlu Kita Tahu</span>
           <span class="hero-divider-line"></span>
         </div>
