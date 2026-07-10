@@ -7,23 +7,34 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
-/* Gradient overlay di atas foto: gelap di kiri (area teks), transparan di kanan (area botol) */
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.85) brightness(1);
+  z-index: 0;
+}
+
+/* Dua layer: (1) tint hijau brand merata di seluruh foto,
+   (2) gradient lebih pekat di kiri buat area teks, pakai warna Hunter Green bukan abu-abu netral */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(20, 20, 20, 0.55) 0%,
-    rgba(20, 20, 20, 0.45) 35%,
-    rgba(20, 20, 20, 0.15) 60%,
-    rgba(20, 20, 20, 0) 80%
-  );
+  background:
+    linear-gradient(
+      to right,
+      rgba(19, 34, 17, 0.45) 0%,
+      rgba(19, 34, 17, 0.3) 35%,
+      rgba(19, 34, 17, 0.1) 60%,
+      rgba(19, 34, 17, 0) 100%
+    ),
+    rgba(159, 204, 153, 0.18);
   z-index: 1;
 }
 
@@ -46,9 +57,9 @@
   height: 620px;
   background: radial-gradient(
     ellipse at 30% 40%,
-    rgba(235, 235, 235, 0.85) 0%,
-    rgba(235, 235, 235, 0.55) 45%,
-    rgba(235, 235, 235, 0) 75%
+    rgba(223, 238, 221, 0.85) 0%,
+    rgba(191, 221, 187, 0.5) 45%,
+    rgba(191, 221, 187, 0) 75%
   );
   filter: blur(50px);
   z-index: -1;
@@ -58,8 +69,8 @@
 .hero-badge {
   position: relative;
   display: inline-block;
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--color-neutral-900);
+  background: var(--color-hunter-green-800);
+  color: #ffffff;
   font-family: var(--font-body);
   font-weight: var(--fw-semibold);
   font-size: 15px;

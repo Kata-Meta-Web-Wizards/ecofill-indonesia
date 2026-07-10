@@ -3,7 +3,8 @@ import heroBg from "../../assets/images/hero-bg.png";
 
 function renderMarkup() {
   return `
-    <div class="hero-bg" style="background-image: url('${heroBg}')">
+    <div class="hero-bg">
+      <div class="hero-photo" style="background-image: url('${heroBg}')"></div>
       <div class="hero-overlay"></div>
 
       <div class="hero-inner">
