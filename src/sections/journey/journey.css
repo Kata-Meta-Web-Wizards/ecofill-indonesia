@@ -1,0 +1,196 @@
+#journey {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.journey-block {
+  margin-bottom: 40px;
+}
+
+.journey-block:last-child {
+  margin-bottom: 0;
+}
+
+.journey-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 15px;
+  color: var(--color-neutral-800);
+  margin: 0 0 24px;
+}
+
+.journey-bar {
+  width: 3px;
+  height: 18px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.journey-bar-bad {
+  background: #d85a30;
+}
+
+.journey-bar-good {
+  background: var(--color-hunter-green-500);
+}
+
+.journey-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 24px 4px 12px;
+}
+
+.journey-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  width: 150px;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.journey-visible .journey-step {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efek zigzag: step genap naik, step ganjil turun sedikit — nyiptain kesan dimensi */
+.journey-step:nth-child(4n+1) { margin-top: 0; }
+.journey-step:nth-child(4n+3) { margin-top: 28px; }
+
+.step-icon-box {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon-box svg,
+.step-icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.step-icon-img {
+  object-fit: contain;
+}
+
+.step-label {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 13px;
+  text-align: center;
+  color: var(--color-neutral-800);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.step-label-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-bottom: 2px;
+}
+
+.dot-bad { background: #d85a30; }
+.dot-good { background: var(--color-hunter-green-500); }
+
+.journey-arrow {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  color: var(--color-neutral-500, var(--color-neutral-600));
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.journey-visible .journey-arrow {
+  opacity: 1;
+}
+
+.journey-arrow svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Floating subtle cuma di step terakhir tiap baris —
+   TPA/laut (kesan ombak) dan isi-ulang-lagi (kesan siklus terus berputar) */
+.step-icon-floating {
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.journey-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.callout-bad {
+  background: #fcebeb;
+}
+
+.callout-bad .callout-icon {
+  color: #a32d2d;
+}
+
+.callout-bad p {
+  color: #791f1f;
+}
+
+.callout-good {
+  background: var(--color-hunter-green-50);
+}
+
+.callout-good .callout-icon {
+  color: var(--color-hunter-green-700);
+}
+
+.callout-good p {
+  color: var(--color-hunter-green-900);
+}
+
+.callout-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.journey-callout p {
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .journey-step {
+    width: 80px;
+  }
+
+  .step-icon-box {
+    width: 48px;
+    height: 48px;
+  }
+}
