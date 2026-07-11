@@ -6,6 +6,7 @@ import { initHowItWorks } from "./sections/how-it-works/how-it-works.js";
 import { initCalculator } from './sections/calculator/calculator.js'
 import { initMap } from "./sections/map/map.js";
 import { initProducts } from "./sections/products/products.js";
+import { initCommunityStories } from "./sections/community-stories/community-stories.js";
 import { initChallenge } from "./sections/challenge/challenge.js";
 import { initFaq } from "./sections/faq/faq.js";
 
@@ -15,5 +16,6 @@ initHowItWorks();
 initCalculator()
 initMap();
 initProducts();
+initCommunityStories();
 initChallenge();
 initFaq();
