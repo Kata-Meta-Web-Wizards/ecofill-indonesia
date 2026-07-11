@@ -1,29 +1,34 @@
 import "./impact.css";
 
+import refillIcon from "../../assets/icons/refill.svg";
+import wasteIcon from "../../assets/icons/waste-off.svg";
+import bottleIcon from "../../assets/icons/bottle-stat.svg";
+import communityIcon from "../../assets/icons/community.svg";
+
 const STATS = [
   {
     value: 50284,
     suffix: "",
     label: "refill dilakukan",
-    icon: `<path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M18 4v4h-4M6 20v-4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>`,
+    icon: refillIcon,
   },
   {
     value: 1200,
     suffix: " kg",
     label: "sampah plastik dicegah",
-    icon: `<path d="M5 7h14M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M7 7l1 13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1l1-13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 3l18 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>`,
+    icon: wasteIcon,
   },
   {
     value: 8420,
     suffix: "",
     label: "botol digunakan kembali",
-    icon: `<path d="M10 3h4v3l2 3v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9l2-3V3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>`,
+    icon: bottleIcon,
   },
   {
     value: 542,
     suffix: "",
     label: "komunitas bergabung",
-    icon: `<circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 8a3 3 0 1 1 0-6M17 14c2.8.4 5 2.8 5 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>`,
+    icon: communityIcon,
   },
 ];
 
@@ -36,9 +41,7 @@ function renderMarkup() {
     (stat, i) => `
       <div class="impact-stat" style="transition-delay:${i * 0.12}s">
         <div class="impact-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            ${stat.icon}
-          </svg>
+          <img src="${stat.icon}" alt="" class="impact-icon-img" />
         </div>
         <p class="impact-value" data-target="${stat.value}" data-suffix="${stat.suffix}">0</p>
         <p class="impact-label">${stat.label}</p>

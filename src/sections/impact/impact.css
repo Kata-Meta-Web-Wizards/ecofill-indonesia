@@ -102,9 +102,14 @@
   margin: 0 auto 14px;
 }
 
-.impact-icon svg {
+.impact-icon svg,
+.impact-icon img {
   width: 19px;
   height: 19px;
+}
+
+.impact-icon-img {
+  object-fit: contain;
 }
 
 .impact-value {
