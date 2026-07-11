@@ -9,31 +9,31 @@ const STATS = [
   {
     value: 50284,
     suffix: "",
-    label: "refill dilakukan",
+    label: "refills completed",
     icon: refillIcon,
   },
   {
     value: 1200,
     suffix: " kg",
-    label: "sampah plastik dicegah",
+    label: "plastic waste prevented",
     icon: wasteIcon,
   },
   {
     value: 8420,
     suffix: "",
-    label: "botol digunakan kembali",
+    label: "bottles reused",
     icon: bottleIcon,
   },
   {
     value: 542,
     suffix: "",
-    label: "komunitas bergabung",
+    label: "community members joined",
     icon: communityIcon,
   },
 ];
 
 function formatNumber(value) {
-  return Math.round(value).toLocaleString("id-ID");
+  return Math.round(value).toLocaleString("en-US");
 }
 
 function renderMarkup() {
@@ -53,11 +53,11 @@ function renderMarkup() {
     <div class="impact-decor impact-decor-2"></div>
 
     <div class="impact-inner">
-      <p class="impact-eyebrow">Bersama kita telah mengurangi</p>
-      <h2 class="impact-title">Dampak nyata dari gerakan ini</h2>
+      <p class="impact-eyebrow">Together, we've reduced</p>
+      <h2 class="impact-title">Real impact from this movement</h2>
       <p class="impact-subtitle">
-        Setiap angka di bawah ini mewakili satu keputusan kecil yang, kalau
-        dilakukan bersama, jadi perubahan besar.
+        Every number below represents one small decision that, when made
+        together, becomes a big change.
       </p>
 
       <div class="impact-grid">
@@ -66,7 +66,7 @@ function renderMarkup() {
 
       <p class="impact-footnote">
         <span class="impact-live-dot"></span>
-        Diperbarui secara berkala dari jaringan mitra refill station
+        Updated regularly from our refill station partner network
       </p>
     </div>
   `;

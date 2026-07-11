@@ -11,17 +11,17 @@ import refreshBaseIcon from "../../assets/images/journey-refresh-base.svg";
 import refreshArrowsIcon from "../../assets/images/journey-refresh-arrows.png";
 
 const SACHET_STEPS = [
-  { label: "Beli Sachet", icon: sachetIcon },
-  { label: "Dipakai Sekali", icon: handIcon },
-  { label: "Dibuang", icon: trashIcon },
-  { label: "TPA/sungai/laut", icon: wavesIcon, floating: true },
+  { label: "Buy Sachet", icon: sachetIcon },
+  { label: "Used Once", icon: handIcon },
+  { label: "Discarded", icon: trashIcon },
+  { label: "Landfill / River / Ocean", icon: wavesIcon, floating: true },
 ];
 
 const REFILL_STEPS = [
-  { label: "Beli Botol Sekali", icon: bottleIcon },
-  { label: "Isi Ulang", icon: dropletIcon },
-  { label: "Dipakai Lagi", icon: handPourIcon },
-  { label: "Isi ulang lagi", icon: refreshBaseIcon, overlay: refreshArrowsIcon },
+  { label: "Buy Bottle Once", icon: bottleIcon },
+  { label: "Refill", icon: dropletIcon },
+  { label: "Used Again", icon: handPourIcon },
+  { label: "Refill Again", icon: refreshBaseIcon, overlay: refreshArrowsIcon },
 ];
 
 function renderStep(step, index, dotClass) {
@@ -63,7 +63,7 @@ function renderRow(steps, dotClass) {
 function renderMarkup() {
   return `
     <div class="journey-block">
-      <p class="journey-heading"><span class="journey-bar journey-bar-bad"></span>Jalur sachet sekali pakai</p>
+      <p class="journey-heading"><span class="journey-bar journey-bar-bad"></span>Single-use sachet path</p>
       <div class="journey-row">
         ${renderRow(SACHET_STEPS, "dot-bad")}
       </div>
@@ -71,12 +71,12 @@ function renderMarkup() {
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="callout-icon">
           <path d="M12 9v4M12 17h.01M10.3 3.9 2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
         </svg>
-        <p>Sachet terbuat dari 3&ndash;4 lapisan plastik berbeda &mdash; hampir tidak bisa didaur ulang oleh industri manapun.</p>
+        <p>Sachets are made of 3&ndash;4 different plastic layers &mdash; almost impossible for any industry to recycle.</p>
       </div>
     </div>
 
     <div class="journey-block">
-      <p class="journey-heading"><span class="journey-bar journey-bar-good"></span>Jalur refill isi ulang</p>
+      <p class="journey-heading"><span class="journey-bar journey-bar-good"></span>Refill path</p>
       <div class="journey-row">
         ${renderRow(REFILL_STEPS, "dot-good")}
       </div>
@@ -84,7 +84,7 @@ function renderMarkup() {
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="callout-icon">
           <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <p>Satu botol bisa menggantikan ratusan sachet &mdash; dan terus digunakan selama bertahun-tahun.</p>
+        <p>One bottle can replace hundreds of sachets &mdash; and keeps getting used for years.</p>
       </div>
     </div>
   `;

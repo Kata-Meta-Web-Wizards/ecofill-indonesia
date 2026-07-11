@@ -1,10 +1,10 @@
 import "./composition.css";
 
 const DATA = [
-  { label: "Sachet", value: 38, color: "#D85A30" },
-  { label: "Kantong", value: 27, color: "#EF9F27" },
-  { label: "Botol", value: 19, color: "var(--color-hunter-green-500)" },
-  { label: "Lain", value: 16, color: "var(--color-neutral-600)" },
+  { label: "Sachets", value: 38, color: "#D85A30" },
+  { label: "Plastic bags", value: 27, color: "#EF9F27" },
+  { label: "Bottles", value: 19, color: "var(--color-hunter-green-500)" },
+  { label: "Other", value: 16, color: "var(--color-neutral-600)" },
 ];
 
 const RADIUS = 80;
@@ -52,23 +52,23 @@ function renderMarkup() {
 
   return `
     <div class="composition-header">
-      <p class="composition-eyebrow">Masalah yang sering kita hadapi</p>
-      <h2 class="composition-title">Indonesia dan Kebiasaan Sachet</h2>
+      <p class="composition-eyebrow">A problem we face every day</p>
+      <h2 class="composition-title">Indonesia's Sachet Habit</h2>
       <p class="composition-subtitle">
-        Setiap hari jutaan sachet plastik digunakan dan dibuang. Perjalanannya
-        hampir selalu berakhir di satu tempat.
+        Millions of plastic sachets are used and discarded every day. Their
+        journey almost always ends up in the same place.
       </p>
     </div>
 
     <div class="composition-body">
       <div class="donut-wrap">
-        <svg viewBox="0 0 200 200" class="donut-svg" role="img" aria-label="Donut chart komposisi sampah plastik Indonesia: sachet 38 persen, kantong 27 persen, botol 19 persen, lain 16 persen">
+        <svg viewBox="0 0 200 200" class="donut-svg" role="img" aria-label="Donut chart of Indonesia's plastic waste composition: sachets 38 percent, plastic bags 27 percent, bottles 19 percent, other 16 percent">
           ${circles}
         </svg>
       </div>
 
       <div class="legend-block">
-        <p class="legend-title">Komposisi sampah plastik Indonesia</p>
+        <p class="legend-title">Composition of Indonesia's plastic waste</p>
         <div class="legend-list">
           ${legendItems}
         </div>

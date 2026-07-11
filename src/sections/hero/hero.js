@@ -10,22 +10,22 @@ function renderMarkup() {
       <div class="hero-inner">
         <div class="hero-text-glow"></div>
 
-        <span class="hero-badge">Kemasan Kembali &ndash; Gerakan Refill Indonesia</span>
+        <span class="hero-badge">Return &amp; Refill &ndash; Indonesia's Refill Movement</span>
 
         <h1 class="hero-title">
-          Belanja Tanpa<br />
-          Sampah Plastik
+          Shop Without<br />
+          Plastic Waste
         </h1>
 
         <p class="hero-subtitle">
-          Saatnya beralih ke cara belanja yang lebih baik! Kunjungi refill
-          station terdekat untuk mengisi ulang kebutuhan rumah tangga. Solusi
-          ramah lingkungan dan hemat biaya dengan menggunakan kembali
-          wadahmu dan mengurangi sampah sachet.
+          It's time to switch to a better way of shopping! Visit the nearest
+          refill station to restock your household essentials. An
+          eco-friendly, cost-saving solution &mdash; reuse your own container
+          and cut down on sachet waste.
         </p>
 
         <div class="hero-divider">
-          <span class="hero-divider-label">Fakta yang Perlu Kita Tahu</span>
+          <span class="hero-divider-label">Facts You Need to Know</span>
           <span class="hero-divider-line"></span>
         </div>
 
@@ -38,9 +38,9 @@ function renderMarkup() {
                 <path d="M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <p class="hero-fact-value">4 Kg</p>
-            <p class="hero-fact-label">sachet per orang per tahun</p>
-            <p class="hero-fact-desc">Rata-rata konsumsi sachet plastik satu orang Indonesia setiap tahunnya.</p>
+            <p class="hero-fact-value">4 kg</p>
+            <p class="hero-fact-label">of sachet waste per person per year</p>
+            <p class="hero-fact-desc">The average sachet plastic consumption of one Indonesian per year.</p>
           </div>
 
           <div class="hero-fact-card">
@@ -50,9 +50,9 @@ function renderMarkup() {
                 <path d="M12 6v12M9.5 9.5c0-1.2 1.1-2 2.5-2s2.5.9 2.5 2-.9 1.6-2.5 2c-1.6.4-2.5 1-2.5 2.2s1.1 2 2.5 2 2.5-.8 2.5-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <p class="hero-fact-value">Rp 1,5 T</p>
-            <p class="hero-fact-label">kerugian sosial per tahun</p>
-            <p class="hero-fact-desc">Dari gangguan kesehatan akibat pembakaran sampah sachet di TPA terbuka.</p>
+            <p class="hero-fact-value">Rp 1.5T</p>
+            <p class="hero-fact-label">in social costs every year</p>
+            <p class="hero-fact-desc">From health issues caused by burning sachet waste in open landfills.</p>
           </div>
 
           <div class="hero-fact-card">
@@ -62,9 +62,9 @@ function renderMarkup() {
                 <path d="M15 15a1 1 0 1 1-2 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <p class="hero-fact-value">800 rb ton</p>
-            <p class="hero-fact-label">plastik ke laut pada 2025</p>
-            <p class="hero-fact-desc">Proyeksi aliran sampah plastik Indonesia ke perairan, naik 30% dari tahun sebelumnya.</p>
+            <p class="hero-fact-value">800K tons</p>
+            <p class="hero-fact-label">of plastic entering the ocean by 2025</p>
+            <p class="hero-fact-desc">Projected flow of Indonesia's plastic waste into waterways, up 30% from the previous year.</p>
           </div>
         </div>
       </div>
