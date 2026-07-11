@@ -15,7 +15,7 @@ const SACHET_STEPS = [
   { label: "Used Once", icon: handIcon },
   { label: "Discarded", icon: trashIcon },
   { label: "Landfill / River / Ocean", icon: wavesIcon, floating: true },
-];
+]; 
 
 const REFILL_STEPS = [
   { label: "Buy Bottle Once", icon: bottleIcon },
