@@ -1,0 +1,146 @@
+#composition {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.composition-header {
+  text-align: left;
+  max-width: 640px;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.composition-visible .composition-header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.composition-eyebrow {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #993c1d;
+  margin: 0 0 8px;
+}
+
+.composition-title {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: 32px;
+  color: var(--color-neutral-900);
+  margin: 0 0 12px;
+}
+
+.composition-subtitle {
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-neutral-600);
+  margin: 0;
+}
+
+.composition-body {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+
+.donut-wrap {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
+}
+
+.composition-visible .donut-wrap {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.donut-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.donut-arc {
+  stroke-linecap: butt;
+}
+
+.legend-block {
+  flex: 1;
+  min-width: 220px;
+}
+
+.legend-title {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: 19px;
+  color: var(--color-neutral-900);
+  margin: 0 0 20px;
+}
+
+.legend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.composition-visible .legend-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.legend-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 15px;
+  color: var(--color-neutral-800);
+}
+
+.legend-value {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: 15px;
+  color: var(--color-neutral-900);
+  margin-left: auto;
+}
+
+@media (max-width: 640px) {
+  .composition-body {
+    gap: 32px;
+  }
+
+  .donut-wrap {
+    width: 180px;
+    height: 180px;
+  }
+
+  .composition-title {
+    font-size: 26px;
+  }
+}
