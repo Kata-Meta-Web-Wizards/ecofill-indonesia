@@ -9,7 +9,7 @@ const NAV_LINKS = [
 ];
 
 const RESOURCE_LINKS = [
-  { label: "How It Works", href: "#journey" },
+  { label: "How It Works", href: "#how-it-works" },
   { label: "Plastic Calculator", href: "#calculator" },
   { label: "FAQ", href: "#faq" },
   { label: "Become a Partner", href: "#partner" },

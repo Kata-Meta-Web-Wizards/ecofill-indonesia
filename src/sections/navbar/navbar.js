@@ -17,10 +17,10 @@ function renderMarkup() {
       </button>
 
       <ul class="navbar-links" id="navbar-links">
-        <li><a href="#lokasi">Locations</a></li>
-        <li><a href="#produk">Products</a></li>
-        <li><a href="#dampak">Impact</a></li>
-        <li><a href="#tentang">About Us</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#map">Locations</a></li>
+        <li><a href="#impact">Impact</a></li>
       </ul>
     </div>
   `;
