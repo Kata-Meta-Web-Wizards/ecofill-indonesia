@@ -7,7 +7,8 @@ import wavesIcon from "../../assets/images/journey-waves.svg";
 import bottleIcon from "../../assets/images/journey-bottle.svg";
 import dropletIcon from "../../assets/images/journey-droplet.svg";
 import handPourIcon from "../../assets/images/journey-hand-pour.svg";
-import refreshIcon from "../../assets/images/journey-refresh.svg";
+import refreshBaseIcon from "../../assets/images/journey-refresh-base.svg";
+import refreshArrowsIcon from "../../assets/images/journey-refresh-arrows.png";
 
 const SACHET_STEPS = [
   { label: "Beli Sachet", icon: sachetIcon },
@@ -20,15 +21,19 @@ const REFILL_STEPS = [
   { label: "Beli Botol Sekali", icon: bottleIcon },
   { label: "Isi Ulang", icon: dropletIcon },
   { label: "Dipakai Lagi", icon: handPourIcon },
-  { label: "Isi ulang lagi", icon: refreshIcon, floating: true },
+  { label: "Isi ulang lagi", icon: refreshBaseIcon, overlay: refreshArrowsIcon },
 ];
 
 function renderStep(step, index, dotClass) {
   const floatClass = step.floating ? "step-icon-floating" : "";
+  const overlay = step.overlay
+    ? `<img src="${step.overlay}" alt="" class="step-icon-overlay-spin" />`
+    : "";
   return `
     <div class="journey-step" style="transition-delay:${index * 0.12}s">
       <div class="step-icon-box ${floatClass}">
         <img src="${step.icon}" alt="" class="step-icon-img" />
+        ${overlay}
       </div>
       <span class="step-label-dot ${dotClass}"></span>
       <p class="step-label">${step.label}</p>
