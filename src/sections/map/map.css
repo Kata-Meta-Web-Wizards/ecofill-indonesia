@@ -48,7 +48,6 @@
   background-color: #ffffff;
   z-index: 10;
   border-right: 1px solid #e2e8f0;
-  box-sizing: border-box;
 }
 
 .refill-controls {
@@ -92,7 +91,6 @@
   gap: 0.5rem;
   overflow-x: auto; 
   padding-bottom: 0.5rem;
-  padding-right: 1rem;
 }
 
 .city-pill-container::-webkit-scrollbar {
@@ -115,7 +113,6 @@
   cursor: pointer;
   white-space: nowrap; 
   transition: all 0.2s ease;
-  flex-shrink: 0;
 }
 
 .city-pill:hover {
@@ -231,8 +228,6 @@
   margin: 0 !important;
   width: max-content !important;
   min-width: 220px;
-  max-width: 500px !important; 
-  box-sizing: border-box;
 }
 
 .leaflet-popup-tip-container {
