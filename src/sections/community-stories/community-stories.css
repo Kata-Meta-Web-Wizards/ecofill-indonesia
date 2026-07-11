@@ -3,7 +3,7 @@
   min-height: 920px;
   overflow: hidden;
   padding: 110px 32px 96px;
-  background: var(--color-hunter-green-950);
+  background: #ffffff;
   box-sizing: border-box;
 }
 
@@ -15,11 +15,7 @@
 }
 
 .community-stories-background {
-  background-image: url("/images/backgrounds/background-products.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.55;
+  display: none;
 }
 
 .community-stories-glow {
@@ -35,7 +31,7 @@
 }
 
 .community-stories-header {
-  color: #ffffff;
+  color: var(--color-hunter-green-800);
   text-align: center;
 }
 
@@ -46,8 +42,8 @@
   padding: 0 20px;
   border: 0;
   border-radius: 999px;
-  background: #ffffff;
-  color: var(--color-hunter-green-800);
+  background: var(--color-hunter-green-700);
+  color: #ffffff;
   font-size: 15px;
   font-weight: var(--fw-semibold);
   letter-spacing: 0.08em;
@@ -62,7 +58,7 @@
 
 .community-stories-header p {
   margin: 16px 0 0;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--color-neutral-600);
   font-size: clamp(1.05rem, 1.6vw, 1.5rem);
   font-weight: 400;
 }
@@ -289,7 +285,7 @@
   min-height: 50px;
   padding: 0 12px;
   border-radius: 999px;
-  background: #ffffff;
+  background: var(--color-hunter-green-100);
 }
 
 .community-stories-page-number {
@@ -312,8 +308,8 @@
 .community-stories-page-number.is-active {
   width: 46px;
   height: 46px;
-  border: 3px solid var(--color-black);
-  color: var(--color-black);
+  border: 3px solid var(--color-hunter-green-800);
+  color: var(--color-hunter-green-800);
   font-size: 25px;
 }
 
