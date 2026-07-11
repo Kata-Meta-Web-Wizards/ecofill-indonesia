@@ -1,0 +1,193 @@
+#hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero-bg {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.85) brightness(1);
+  z-index: 0;
+}
+
+/* Dua layer: (1) tint hijau brand merata di seluruh foto,
+   (2) gradient lebih pekat di kiri buat area teks, pakai warna Hunter Green bukan abu-abu netral */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(215, 234, 213, 1) 0%,    /* Hijau muda pekat/solid di area teks kiri */
+    rgba(215, 234, 213, 0.95) 35%, /* Masih cukup solid biar teks gampang dibaca */
+    rgba(215, 234, 213, 0.4) 60%,  /* Mulai pudar transparan di tengah */
+    rgba(215, 234, 213, 0) 100%    /* Full transparan di kanan biar gambar botol kelihatan jelas */
+  );
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 24px 64px;
+  width: 100%;
+}
+
+/* Soft blurred gradient blob di belakang badge+judul+subtitle,
+   nge-blend ke foto tanpa kotak tegas */
+.hero-text-glow {
+  position: absolute;
+  top: -40px;
+  left: -60px;
+  width: 780px;
+  height: 620px;
+  background: radial-gradient(
+    ellipse at 30% 40%,
+    rgba(223, 238, 221, 0.85) 0%,
+    rgba(191, 221, 187, 0.5) 45%,
+    rgba(191, 221, 187, 0) 75%
+  );
+  filter: blur(50px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-badge {
+  position: relative;
+  display: inline-block;
+  background: var(--color-hunter-green-800);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 15px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  margin-bottom: 28px;
+}
+
+.hero-title {
+  position: relative;
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1);
+  line-height: 1.1;
+  color: var(--color-neutral-900);
+  margin: 0 0 24px;
+  max-width: 720px;
+}
+
+.hero-subtitle {
+  position: relative;
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-neutral-800);
+  max-width: 620px;
+  margin: 0 0 32px;
+}
+
+.hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  max-width: 900px;
+}
+
+.hero-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-hunter-green-950);
+}
+
+.hero-divider-label {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 14px;
+  color: var(--color-hunter-green-950);
+  white-space: nowrap;
+}
+
+.hero-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 900px;
+}
+
+.hero-fact-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.hero-fact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-hunter-green-100);
+  color: var(--color-neutral-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.hero-fact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-fact-value {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: 24px;
+  color: var(--color-neutral-900);
+  margin: 0 0 6px;
+}
+
+.hero-fact-label {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 13px;
+  color: var(--color-neutral-800);
+  margin: 0 0 8px;
+}
+
+.hero-fact-desc {
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-neutral-600);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .hero-facts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-inner {
+    padding: 120px 16px 40px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+}
