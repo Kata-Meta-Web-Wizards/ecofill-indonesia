@@ -489,16 +489,15 @@
 
 @media (max-width: 900px) {
   .products-shell {
-    position: relative;
-    min-height: 920px;
-    overflow: hidden;
-    padding: 58px 38px 48px;
-    color: #000000;
+    display: flex;
+    align-items: center;
+    min-height: 1000px;
+    padding: 70px clamp(28px, 4vw, 64px);
+    box-sizing: border-box;
   }
 
   .products-content {
-    position: relative;
-    z-index: 1;
+    width: 100%;
     max-width: 1500px;
     margin: 0 auto;
   }
@@ -614,17 +613,21 @@
 
 @media (min-width: 901px) {
   .products-shell {
-    min-height: 820px;
-    padding: 44px 28px 42px;
+    display: flex;
+    align-items: center;
+    min-height: 1000px;
+    padding: 70px clamp(28px, 4vw, 64px);
+    box-sizing: border-box;
   }
 
   .products-content {
-    width: min(96vw, 1500px);
-    max-width: none;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
   }
 
   .products-title {
-    margin: 0 0 28px;
+    margin: 0 0 48px;
     font-size: clamp(54px, 5.4vw, 88px);
   }
 
@@ -751,11 +754,13 @@
   }
 
   .products-legend {
-    min-height: 42px;
-    margin-top: 18px;
+    height: 50px;
+    min-height: 50px;
+    margin-top: 32px;
     gap: 14px;
-    padding: 0 16px;
-    border-radius: 16px;
+    padding: 0 18px;
+    border-radius: 30px;
+    box-sizing: border-box;
   }
 
   .products-legend em,
@@ -769,7 +774,7 @@
   }
 
   .products-pagination {
-    margin-top: 18px;
+    margin-top: 32px;
   }
 }
 
