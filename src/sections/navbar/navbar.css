@@ -52,8 +52,17 @@
   font-size: 19px;
 }
 
-.brand-eco { color: var(--color-hunter-green-800); font-weight: var(--fw-bold); font-style: bold; }
-.brand-fill { color: var(--color-hunter-green-500); font-weight: var(--fw-bold); font-style: bold; }
+.navbar-brand .brand-eco {
+  color: var(--color-hunter-green-800);
+  font-weight: var(--fw-bold);
+  font-style: bold;
+}
+
+.navbar-brand .brand-fill {
+  color: var(--color-hunter-green-500);
+  font-weight: var(--fw-bold);
+  font-style: bold;
+}
 
 .brand-line2 {
   font-family: var(--font-heading);
